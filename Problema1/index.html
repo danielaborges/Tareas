@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Problema1</title>
+</head>
+<body>
+	<script>
+		var x = parseInt(prompt("indique el primer numero"));
+		var y = parseInt(prompt("indique el segundo numero"));
+
+		function resultado(x, y){ 
+			if(x < y){
+				return resultado(y ,x );
+			} else if (y != 0){
+				return x + resultado(x, y-1);
+			}else {
+				return 0;
+			}
+		}
+		alert(resultado(x,y));
+	</script>
+</body>
+</html>

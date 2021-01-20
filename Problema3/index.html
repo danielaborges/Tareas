@@ -1,0 +1,54 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Problema3</title>
+</head>
+<body>
+	<h4>Validacion de  Contraseña</h4>
+
+	<form action="" name="formulario" method="get" id="formulario">
+	 	<label for="passwd">Introduzca la contraseña:</label> <br>
+		<input type="password" name="password" id="p1" maxlength="20" placeholder="contraseña" minlength="16" maxlength="20"><br/>
+		<input type="submit" id="btn" name="btn" value="Enviar"/> 
+	</form>
+	
+<script>
+
+
+(function () {
+var formulario = document.getElementsByName('formulario')[0],
+elementos =formulario.elements,
+boton =document.getElementById('btn');
+
+var clave = document.getElementById("clave");
+
+clave = function(e) {
+ if (this.value.length > 16) 
+     this.value = this.value.slice(0,16);
+ e.prevenDefault();
+};
+
+var validarPassword = function(e){
+if(formulario.password.value == 0){
+    alert("No puede estar vacio");
+    e.prevenDefault();
+}
+
+};
+
+var validar= function(e){
+validarPassword(e);
+clave(e);
+
+};
+
+}())
+
+
+
+
+</script>
+</body>
+</html>
